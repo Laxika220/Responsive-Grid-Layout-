@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1b1d4a; /* Match image background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-auto-rows: minmax(100px, auto);
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .box {
+      width: 100%;
+      height: 100%;
+    }
+
+    .green { background-color: #4CAF50; }
+    .red { background-color: #f44336; }
+    .orange { background-color: #FF9800; }
+
+    /* Simulate sizes like in image using grid spans */
+    .box1 { grid-row: span 3; }
+    .box2 { grid-column: span 2; }
+    .box9 { grid-row: span 2; }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="box green box1"></div>
+    <div class="box green box2"></div>
+    <div class="box red"></div>
+    <div class="box orange"></div>
+    <div class="box red"></div>
+    <div class="box green box9"></div>
+    <div class="box red"></div>
+    <div class="box orange"></div>
+  </div>
+
+</body>
+</html>
